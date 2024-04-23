@@ -30,6 +30,11 @@ const PipelinePage = async ({ params }: Props) => {
     params.pipelineId
   )) as LaneDetail[];
 
+  // console.log("In Pipline Id page");
+  // console.log(lanes);
+
+  // console.log("Stringify");
+  // console.log(JSON.parse(JSON.stringify(lanes)));
   return (
     <Tabs defaultValue="view" className="w-full">
       <TabsList className="bg-transparent border-b-2 h-16 w-full justify-between mb-4">
@@ -46,7 +51,7 @@ const PipelinePage = async ({ params }: Props) => {
       <TabsContent value="view">
         PipelineView
         <PipelineView
-          lanes={lanes}
+          lanes={JSON.parse(JSON.stringify(lanes))}
           pipelineDetails={pipelineDetails}
           pipelineId={params.pipelineId}
           subaccountId={params.subaccountId}
