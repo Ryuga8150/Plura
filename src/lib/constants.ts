@@ -44,7 +44,7 @@ export const pricingCards = [
     duration: "month",
     highlight: "Key features",
     features: ["Rebilling", "24/7 Support team"],
-    priceId: "price_1OYxkqFj9oKEERu1KfJGWxgN",
+    priceId: "price_1P9fVlSA7lR52xKKRZssWhKp",
   },
   {
     title: "Basic",
@@ -53,12 +53,14 @@ export const pricingCards = [
     duration: "month",
     highlight: "Everything in Starter, plus",
     features: ["Unlimited Sub accounts", "Unlimited Team members"],
-    priceId: "price_1OYxkqFj9oKEERu1NbKUxXxN",
+    // priceId: "price_1OYxkqFj9oKEERu1NbKUxXxN",
+    priceId: "price_1P9fVlSA7lR52xKKtEXLr3Vt",
   },
 ];
 
+// WIP change priority support
 export const addOnProducts = [
-  { title: "Priority Support", id: "prod_PNjJAE2EpP16pn" },
+  { title: "Priority Support", id: "prod_Pzf8DNFJnPjcU0" },
 ];
 
 export const icons = [

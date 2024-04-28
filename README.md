@@ -32,3 +32,7 @@
 ## Shadcn UI Theme creator
 
 [Link To Website](https://gradient.page/tools/shadcn-ui-theme-generator)
+
+## Todo's
+
+- Restrict access to free tier i.e 3 subaccounts
