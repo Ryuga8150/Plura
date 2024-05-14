@@ -23,12 +23,12 @@ export async function POST(req: Request) {
     !process.env.NEXT_PUBLIC_PLATFORM_ONETIME_FEE ||
     !process.env.NEXT_PUBLIC_PLATFORM_AGENY_PERCENT
   ) {
-    console.log("VALUES DONT EXITS");
+    console.log("VALUES DON'T EXISTS");
     return NextResponse.json({ error: "Fees do not exist" });
   }
 
   // Not needed unless we want to send payments to this account.
-  //CHALLENGE Transfer money to a connected
+  // CHALLENGE Transfer money to a connected account apart from plura like a piece of cake to them too
   // const agencyIdConnectedAccountId = await db.subAccount.findUnique({
   //   where: { id: subaccountId },
   //   include: { Agency: true },
@@ -75,6 +75,7 @@ export async function POST(req: Request) {
       {
         clientSecret: session.client_secret,
       },
+      // to allow access from anywhere important
       {
         headers: {
           "Access-Control-Allow-Origin": origin || "*",
@@ -90,6 +91,7 @@ export async function POST(req: Request) {
   }
 }
 
+// according to him options were not set by next js 13 and 14 so he did by himself
 export async function OPTIONS(request: Request) {
   const allowedOrigin = request.headers.get("origin");
   const response = new NextResponse(null, {
