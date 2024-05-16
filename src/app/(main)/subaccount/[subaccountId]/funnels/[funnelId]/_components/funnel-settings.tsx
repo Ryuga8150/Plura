@@ -34,13 +34,14 @@ const FunnelSettings: React.FC<FunnelSettingsProps> = async ({
   console.log(subaccountDetails);
 
   if (!subaccountDetails) return;
-  // if (!subaccountDetails.connectAccountId) return;
-  // console.log("here");
-  // const products = await getConnectAccountProducts(
-  //   subaccountDetails.connectAccountId
-  // );
+  console.log("Checking if subaccountDetails.connectAccountId");
+  if (!subaccountDetails.connectAccountId) return;
+  console.log("Exists");
+  const products = await getConnectAccountProducts(
+    subaccountDetails.connectAccountId
+  );
 
-  const products: Stripe.Product[] = [];
+  // const products: Stripe.Product[] = [];
 
   return (
     <div className="flex gap-4 flex-col xl:!flex-row">
